@@ -1,0 +1,48 @@
+
+
+
+
+
+
+{% extends 'index.html' %}
+
+{% block content %}
+
+ <h1 class="text-center p-5 text-info ">Cake Details</h1>
+
+<div class="container">
+
+                    <table class="table">
+                      <thead class="table-info">
+                        <tr>
+
+
+                            <th scope="col">Type</th>
+                            <th scope="col">Flavor</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Image</th>
+                        </tr>
+                      </thead>
+
+                           {% for p in pro%}
+                          <tbody>
+                            <tr>
+
+                                <td>{{p.type}}</td>
+                                <td>{{p.flavor}}</td>
+                                <td>{{p.price}}</td>
+                                <td>{{p.stock}}</td>
+                                <td> <img src="{{p.image}}" style="height:60px; width:60px"> </td>
+
+                            </tr>
+
+                          </tbody>
+
+
+                        {% endfor %}
+                    </table>
+</div>
+
+
+{% endblock %}
